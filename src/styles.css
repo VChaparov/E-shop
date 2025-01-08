@@ -1,0 +1,18 @@
+.nav-link{
+    display: inline-flex;
+    align-items: center;
+    color:red;
+}
+.nav-bar{
+    text-align: center;
+}
+
+.card-list{
+    display: inline-flex;
+    text-align: center;
+
+}
+.card{
+
+margin:0.5rem
+}
