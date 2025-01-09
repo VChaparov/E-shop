@@ -6,7 +6,7 @@ import App from "./components/App";
 const root = document.getElementById("root");
 
 ReactDOM.createRoot(root).render(
-  <BrowserRouter >
+  <BrowserRouter basename="/E-shop">
   <StrictMode>
      <App />
     </StrictMode>
