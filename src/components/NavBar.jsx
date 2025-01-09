@@ -4,10 +4,10 @@ function NavBar(){
 
     return(
     <><div className="nav-bar">
-         <NavLink
-         url="Home" />
-         <NavLink
-         url="About" />
+         <NavLink title="Home" url="/" />
+         <NavLink title="Products" url="/Products" />
+         <NavLink title="About" url="/About" />
+         <NavLink title="Contacts" url="/Contacts" />
           </div>
         </>)
     }
