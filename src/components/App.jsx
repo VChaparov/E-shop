@@ -10,9 +10,7 @@ import Layout from "./Layout.jsx";
 
 function App() {
   return (
-    <div style={{display:"flex"}}>
       <Layout />
-    </div>
   )
 }
 

@@ -1,13 +1,14 @@
 import CardList from "../Utilities/CardList";
 import { mockCards } from "../../assets/content/mockData";
 
-function Swimsuits(){
-    const Swimsuits = mockCards.filter((Card)=>Card.category =="Swimsuits");
-    return(
+function Swimsuits() {
+  return (
     <>
-        <CardList cards = {Swimsuits}/>
+      <div className="product-container">
+        <CardList cards={mockCards} />
+      </div>
     </>
-    )  
-    }
+  );
+}
 
 export default Swimsuits;

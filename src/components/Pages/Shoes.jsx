@@ -1,12 +1,14 @@
 import CardList from "../Utilities/CardList";
 import { ShoeData } from "../../assets/content/ShoeData";
 
-function Shoes(){;
-    return(
+function Shoes() {
+  return (
     <>
-        <CardList cards = {ShoeData}/>
+      <div className="product-container">
+        <CardList cards={ShoeData} />
+      </div>
     </>
-    )    
+  );
 }
 
 export default Shoes;
