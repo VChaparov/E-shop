@@ -8,7 +8,7 @@ import sleep from "../Utilities/sleep";
 function Shoes() {
   const query = useQuery({
     queryKey: ["shoes"],
-    queryFn: () => sleep(2000).then(fetchShoes),
+    queryFn: () => sleep(600).then(fetchShoes),
   });
 
   if (query.isLoading) {

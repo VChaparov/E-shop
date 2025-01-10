@@ -5,7 +5,7 @@ export const ShoeData =[
     "name": "Nike React Infinity Run Flyknit",
     "brand": "NIKE",
     "gender": "MEN",
-    "category": "RUNNING",
+    "category": "Shoes",
     "price": 160,
     "is_in_inventory": true,
     "items_left": 3,

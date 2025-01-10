@@ -1,26 +1,30 @@
 import { useState } from "react";
 import React from "react";
 import Card from "./Card";
-import "./CardStyles.css"
+import "./CardStyles.css";
 
-function CardList(props){
-    const cards = props.cards;
-    return(
-        <>
-        {cards.map((card, index) => {
-            return(
+function CardList(props) {
+  const cards = props.cards;
+  return (
+    <>
+      {cards.map((card, index) => {
+        return (
+          <a href={`${import.meta.env.BASE_URL}${card.category}/${card.id}`}
+          key={index}>
             <Card
-            key = {index}
-            id={index}
-            name = {card.name}
-            brand = {card.brand}
-            category = {card.category}
-            imgURL= {card.imgURL}
-            description = {card.description} />
-        )
-    }
-        )}
-        </>)
-    }
+              
+              id={card.id}
+              name={card.name}
+              brand={card.brand}
+              category={card.category}
+              imgURL={card.imgURL}
+              description={card.description}
+            />
+          </a>
+        );
+      })}
+    </>
+  );
+}
 
 export default CardList;

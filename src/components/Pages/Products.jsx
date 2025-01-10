@@ -16,7 +16,7 @@ function Products() {
 
   const query = useQuery({
     queryKey: ["products"],
-    queryFn: () => sleep(2000).then(fetchProducts),
+    queryFn: () => sleep(600).then(fetchProducts),
   });
 
   if (query.isLoading) {

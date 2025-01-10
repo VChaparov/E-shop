@@ -15,7 +15,7 @@ function CardDetails() {
 
   const query = useQuery({
     queryKey: ["product"],
-    queryFn: () => sleep(2000).then(() => fetchProduct(id, category)),
+    queryFn: () => sleep(1000).then(() => fetchProduct(id, category)),
   });
 
   if (query.isLoading) {

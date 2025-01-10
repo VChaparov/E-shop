@@ -21,7 +21,7 @@ function Layout(){
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Products" element={<Products />} />
-                <Route path="/Products/:category/:id" element={<CardDetails />} />
+                <Route path="/:category/:id" element={<CardDetails />} />
                 <Route path="/About" element={<About />} />
                 <Route path="/Contacts" element={<Contacts />} />
                 <Route path="/Products/Shoes" element={<Shoes />} />
