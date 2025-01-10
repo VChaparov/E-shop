@@ -1,4 +1,4 @@
-import {Routes, Route} from "react-router";
+import {Routes, Route, Navigate} from "react-router";
 import Home from "./Pages/Home.jsx";
 import About from "./Pages/About.jsx";
 import Contacts from "./Pages/Contacts.jsx";
@@ -8,7 +8,7 @@ import Swimsuits from "./Pages/Swimsuits.jsx";
 import Header from "./Header";
 import SideBar from "./SideBar";
 import Products from "./Pages/Products.jsx";
-import Product from "./Pages/Product.jsx";
+import CardDetails from "./Utilities/CardDetails.jsx"
 import NotFoundPage from "./Pages/NotFoundPage.jsx";
 
 function Layout(){
@@ -21,13 +21,14 @@ function Layout(){
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Products" element={<Products />} />
-                <Route path="/Products/:category/:id" element={<Product />} />
+                <Route path="/Products/:category/:id" element={<CardDetails />} />
                 <Route path="/About" element={<About />} />
                 <Route path="/Contacts" element={<Contacts />} />
                 <Route path="/Products/Shoes" element={<Shoes />} />
                 <Route path="/Products/Clothes" element={<Clothes />} />
                 <Route path="/Products/Swimsuits" element={<Swimsuits />} /> 
-                <Route path="*" element={<NotFoundPage />} />         
+                <Route path="*" element={<Navigate to="/NotFound" replace />} />
+                <Route path="/NotFound" element={<NotFoundPage />} />         
             </Routes>
             </div>
       </div>
