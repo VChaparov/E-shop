@@ -1,5 +1,5 @@
 import CardList from "../Utilities/CardList";
-import { mockCards } from "../../assets/content/mockData";
+import { SwimsuitsData } from "../../assets/content/mockData";
 
 function Home(){
     return(

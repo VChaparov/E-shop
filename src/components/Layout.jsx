@@ -8,6 +8,8 @@ import Swimsuits from "./Pages/Swimsuits.jsx";
 import Header from "./Header";
 import SideBar from "./SideBar";
 import Products from "./Pages/Products.jsx";
+import Product from "./Pages/Product.jsx";
+import NotFoundPage from "./Pages/NotFoundPage.jsx";
 
 function Layout(){
     return(
@@ -15,15 +17,19 @@ function Layout(){
             <Header />
             <div className="body-container">
             <SideBar />
+            <div className="content-container">
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/Products" element={<Products />} />
+                <Route path="/Products/:category/:id" element={<Product />} />
                 <Route path="/About" element={<About />} />
                 <Route path="/Contacts" element={<Contacts />} />
-                <Route path="/Shoes" element={<Shoes />} />
-                <Route path="/Clothes" element={<Clothes />} />
-                <Route path="/Swimsuits" element={<Swimsuits />} />
+                <Route path="/Products/Shoes" element={<Shoes />} />
+                <Route path="/Products/Clothes" element={<Clothes />} />
+                <Route path="/Products/Swimsuits" element={<Swimsuits />} /> 
+                <Route path="*" element={<NotFoundPage />} />         
             </Routes>
+            </div>
       </div>
       </div>
         )

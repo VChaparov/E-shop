@@ -1,28 +1,29 @@
+export default function fetchClothes(){ return ClothesData}
 export const ClothesData =[
     {
-      "id": 1,
+      "id": 21,
       "name": "Slim Fit Suit In Micro Patterned Stretch Wool",
-      "brand": "NIKE",
+      "brand": "Hugo Boss",
       "gender": "MEN",
-      "category": "RUNNING",
-      "price": 160,
+      "category": "Clothes",
+      "price": 1500,
       "is_in_inventory": true,
-      "items_left": 3,
+      "items_left": 10,
       "imgURL": "Clothes/Slim_fit_suit_in_micro-patterned_stretch_wool",
-      "slug": "nike-react-infinity-run-flyknit",
+      "slug": "slim-fit-suit-in-micro-patterned-stretch-wool",
       "featured" : 0
     },
     {
-      "id": 2,
+      "id": 22,
       "name": "Slim Fit Suit In Micro Patterned Stretch Cloth",
-      "brand": "NIKE",
+      "brand": "Hugo Boss",
       "gender": "MEN",
-      "category": "RUNNING",
-      "price": 130,
+      "category": "Clothes",
+      "price": 1300,
       "is_in_inventory": true,
-      "items_left": 3,
+      "items_left": 8,
       "imgURL": "Clothes/Slim_fit_suit_in_micro-patterned_stretch_cloth",
-      "slug": "nike-react-miler",
+      "slug": "slim-fit-suit-in-micro-patterned-stretch-cloth",
       "featured" : 1
     }
   ]
