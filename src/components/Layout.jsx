@@ -1,20 +1,18 @@
 import Header from "./Pages/Header/Header.jsx";
 import SideBar from "./Pages/Sidebar/SideBar.jsx";
 
-import Content from "./Utilities/Content.jsx";
+import Content from "./Pages/Content/Content.jsx";
 
-function Layout(){
-    return(
-        <div className="container">
-            <Header />
-            <div className="body-container">
-            <SideBar />
-            <div className="content-container">
-            <Content />
-            </div>
+function Layout() {
+  return (
+    <>
+      <Header />
+      <div className="body-container">
+        <SideBar />
+        <Content />
       </div>
-      </div>
-        )
-    }
+    </>
+  );
+}
 
 export default Layout;

@@ -1,8 +1,8 @@
 import fetchSwimsuits from "../../../assets/content/mockData";
 import CardList from "../../Utilities/CardList";
 import { useQuery } from "react-query";
-import { PuffLoader } from "react-spinners";
 import sleep from "../../Utilities/sleep";
+import Loader from "../../Utilities/Loader";
 
 //added sleep function to simulate resource fetching
 function Swimsuits() {
@@ -13,9 +13,7 @@ function Swimsuits() {
 
   if (query.isLoading) {
     return (
-      <div className="loader">
-        <PuffLoader size={150} color="blue" aria-label="Loading Spinner" />
-      </div>
+      <Loader />
     );
   }
 
@@ -23,7 +21,9 @@ function Swimsuits() {
     return <pre>{JSON.stringify(query.error)}</pre>;
   }
   return (
+    <div className="content-grid">
       <CardList cards={query.data} />
+    </div>
   );
 }
 

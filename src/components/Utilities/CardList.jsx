@@ -1,7 +1,7 @@
-import { useState } from "react";
 import React from "react";
 import Card from "./Card";
-import "./CardStyles.css";
+import "./utilitiesStyles.css";
+import { Link } from "react-router";
 
 function CardList(props) {
   const cards = props.cards;
@@ -9,7 +9,7 @@ function CardList(props) {
     <>
       {cards.map((card, index) => {
         return (
-          <a href={`${card.category}/${card.id}`} key={index}>
+          <Link to={`/Products/${card.category}/${card.id}`} key={index}>
             <Card
               id={card.id}
               name={card.name}
@@ -18,7 +18,7 @@ function CardList(props) {
               imgURL={card.imgURL}
               description={card.description}
             />
-          </a>
+          </Link>
         );
       })}
     </>

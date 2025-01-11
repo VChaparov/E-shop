@@ -1,39 +1,13 @@
+html{
+  width: 100%;
+  background-image: url("/images/background.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+}
 body {
   min-width: 30em;
   margin: 0;
-  background-color: gainsboro;
   padding: 0;
-}
-.container {
-  display: inline-block;
-  width: 100%;
-}
-.content-wrapper {
-  display: flex;
-  height: 100%;
-  align-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-  justify-items: center;
-}
-.content-container {
-  display: grid;
-  padding: 1em;
-  height: 100%;
-  align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(13em, 13em));
-  grid-auto-rows: 15em;
-  column-gap: 1em;
-  row-gap: 1em;
-  flex-wrap: wrap;
-  width: 100%;
-  justify-content: center;
-  justify-items: center;
-}
-
-.loader-box {
 }
 .body-container {
   display: inline-flex;
@@ -42,53 +16,72 @@ body {
   justify-items: center;
 }
 .side-bar {
+  display: block;
   height: 100%;
   width: 12em;
-  display: block;
 }
-
 .side-link {
   display: flex;
-  background-color: rgb(6, 53, 7);
-  box-shadow: 1px 1px 2px black;
-  border-radius: 7px;
-  text-align: center;
-  justify-content: center;
   width: 10em;
   height: 2em;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  align-items: center;
-  color: rgb(255, 255, 255);
   margin: 10px;
+  background-color: rgb(6, 53, 7);
+  box-shadow: 1px 1px 2px black;
+  border-radius: 7px;  
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(255, 255, 255);
+  align-items: center;
+  text-align: center;
+  justify-content: center;
   transition: all 0.1s ease-in-out;
 }
 
 .side-link:hover {
+  text-shadow: rgb(28, 92, 189) 1px 0 10px;;
   color: aquamarine;
-  translate: -2px -2px;
+  translate: 1px 0px;
 }
 .nav-bar {
-  background-color: blue;
   display: flex;
+  width: 90%;
   justify-content: center;
+  justify-self: center;
 }
-
 .nav-link {
   display: flex;
+  width: 6em;
+  height: 2em;
+  margin: 10px;
   background-color: rgb(6, 53, 7);
   box-shadow: 1px 1px 2px black;
   border-radius: 7px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(255, 255, 255);
+  align-items: center;
   text-align: center;
   justify-content: center;
-  width: 6em;
-  height: 2em;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  align-items: center;
-  color: rgb(255, 255, 255);
-  margin: 10px;
   transition: all 0.1s ease-in-out;
 }
 .nav-link:hover {
+  text-shadow: rgb(28, 92, 189) 1px 0 10px;;
   color: aquamarine;
-  translate: -2px -2px;
+  translate: 0 1px;
+}
+.logo{
+  display: flex;
+  width:12em;
+  justify-content: center;
+  align-content: center;
+}
+.logo img{
+scale: 1.1;
+ width: 80px;
+ height: 80px;
+}
+.header{
+  display: inline-flex;
+  width: 100%;
+  padding-top: 1em;
+  align-items: center;
+  align-content: center;
 }

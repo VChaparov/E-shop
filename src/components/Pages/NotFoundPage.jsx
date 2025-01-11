@@ -1,9 +1,5 @@
-function NotFoundPage(){
-    return(
-    <>
-    404 Page Not Found
-    </>
-    )
-    }
+function NotFoundPage() {
+  return <>404 Page Not Found</>;
+}
 
 export default NotFoundPage;

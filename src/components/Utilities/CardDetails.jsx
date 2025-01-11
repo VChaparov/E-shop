@@ -3,9 +3,9 @@ import fetchClothes from "../../assets/content/ClothesData";
 import fetchSwimsuits from "../../assets/content/mockData";
 import CardList from "../Utilities/CardList";
 import { useQuery } from "react-query";
-import { PuffLoader } from "react-spinners";
 import sleep from "../Utilities/sleep";
 import { useParams, Navigate } from "react-router";
+import Loader from "./Loader";
 
 //added sleep function to simulate resource fetching
 function CardDetails() {
@@ -14,27 +14,20 @@ function CardDetails() {
   let category = params.category;
 
   const query = useQuery({
-    queryKey: ["product"],
+    queryKey: [`product_${id}`],
     queryFn: () => sleep(1000).then(() => fetchProduct(id, category)),
   });
 
   if (query.isLoading) {
-    return (
-      <div className="loader">
-        <PuffLoader size={150} color="blue" aria-label="Loading Spinner" />
-      </div>
-    );
+    return <Loader />;
   }
 
   if (query.isError) {
     return <pre>{JSON.stringify(query.error)}</pre>;
   }
-  console.log(query.data)
-  if (query.data == undefined || query.data.length == 0) 
+  if (query.data == undefined || query.data.length == 0)
     return <Navigate to="/NotFound" replace />;
-  return (
-      <CardList cards={query.data} />
-  );
+  return <CardList cards={query.data} />;
 }
 export default CardDetails;
 

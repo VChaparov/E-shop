@@ -1,10 +1,5 @@
-
-function Contacts(){
-    return(
-    <>
-    Contacts
-    </>
-    )
-    }
+function Contacts() {
+  return <>Contacts</>;
+}
 
 export default Contacts;

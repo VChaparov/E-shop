@@ -48,7 +48,7 @@ export const ShoeData =[
     "price": 180,
     "is_in_inventory": true,
     "items_left": 3,
-    "imgURL": "Shoes/Nike_React_Infinity_Run_Flyknit",
+    "imgURL": "Shoes/Nike_Joyride_Run_Flyknit",
     "slug": "nike-joyride-run-flyknit",
     "featured" : 0
   },
