@@ -1,14 +1,14 @@
-import fetchClothes from "../../assets/content/ClothesData";
-import CardList from "../Utilities/CardList";
+import fetchSwimsuits from "../../../assets/content/mockData";
+import CardList from "../../Utilities/CardList";
 import { useQuery } from "react-query";
 import { PuffLoader } from "react-spinners";
-import sleep from "../Utilities/sleep";
+import sleep from "../../Utilities/sleep";
 
 //added sleep function to simulate resource fetching
-function Clothes() {
+function Swimsuits() {
   const query = useQuery({
-    queryKey: ["clothes"],
-    queryFn: () => sleep(600).then(fetchClothes),
+    queryKey: ["swimsuits"],
+    queryFn: () => sleep(600).then(fetchSwimsuits),
   });
 
   if (query.isLoading) {
@@ -23,10 +23,8 @@ function Clothes() {
     return <pre>{JSON.stringify(query.error)}</pre>;
   }
   return (
-    <div className="product-container">
       <CardList cards={query.data} />
-    </div>
   );
 }
 
-export default Clothes;
+export default Swimsuits;

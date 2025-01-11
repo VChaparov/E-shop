@@ -1,5 +1,3 @@
-import { useState } from "react";
-import NavLink from "./NavLink";
 import SideLink from "./SideLink";
 function SideBar(){
 

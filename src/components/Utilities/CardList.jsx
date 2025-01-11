@@ -9,10 +9,8 @@ function CardList(props) {
     <>
       {cards.map((card, index) => {
         return (
-          <a href={`${import.meta.env.BASE_URL}${card.category}/${card.id}`}
-          key={index}>
+          <a href={`${card.category}/${card.id}`} key={index}>
             <Card
-              
               id={card.id}
               name={card.name}
               brand={card.brand}

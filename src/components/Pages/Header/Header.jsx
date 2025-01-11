@@ -1,5 +1,5 @@
-import { useState } from "react";
-import NavBar from "./NavBar";
+
+import NavBar from "../Navbar/NavBar"
 
 function Header(){
 

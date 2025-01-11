@@ -29,12 +29,11 @@ function CardDetails() {
   if (query.isError) {
     return <pre>{JSON.stringify(query.error)}</pre>;
   }
+  console.log(query.data)
   if (query.data == undefined || query.data.length == 0) 
     return <Navigate to="/NotFound" replace />;
   return (
-    <div className="product-container">
       <CardList cards={query.data} />
-    </div>
   );
 }
 export default CardDetails;
