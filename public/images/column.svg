@@ -1,0 +1,69 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created using Krita: https://krita.org -->
+<svg xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlns:krita="http://krita.org/namespaces/svg/krita"
+    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+    width="360pt"
+    height="1474.56pt"
+    viewBox="0 0 360 1474.56">
+<defs>
+  <linearGradient id="gradient0" gradientUnits="objectBoundingBox" x1="-0.394075368274717" y1="0.374975787393433" x2="1.1007715961427" y2="0.976757699744858" spreadMethod="pad">
+   <stop stop-color="#ceba9b" offset="0" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.125" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="0.25" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.375" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="0.5" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.625" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="0.75" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.875" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="1" stop-opacity="1"/>
+  </linearGradient>
+  <linearGradient id="gradient1" gradientUnits="objectBoundingBox" x1="0.598387952300848" y1="-17.8253860791905" x2="0.553487162496322" y2="10.3561106037542" spreadMethod="pad">
+   <stop stop-color="#ceba9b" offset="0" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.125" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="0.25" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.375" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="0.5" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.625" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="0.75" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.875" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="1" stop-opacity="1"/>
+  </linearGradient>
+  <linearGradient id="gradient2" gradientUnits="objectBoundingBox" x1="0.679363593907081" y1="24.4457735871803" x2="0.682334615811967" y2="-0.240003008045377" spreadMethod="pad">
+   <stop stop-color="#ceba9b" offset="0" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.125" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="0.25" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.375" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="0.5" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.625" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="0.75" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.875" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="1" stop-opacity="1"/>
+  </linearGradient>
+  <linearGradient id="gradient3" gradientUnits="objectBoundingBox" x1="0.850500642864145" y1="4.16812510309428" x2="0.826862369131228" y2="-3.78890969291686" spreadMethod="pad">
+   <stop stop-color="#ceba9b" offset="0" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.125" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="0.25" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.375" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="0.5" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.625" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="0.75" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.875" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="1" stop-opacity="1"/>
+  </linearGradient>
+  <linearGradient id="gradient4" gradientUnits="objectBoundingBox" x1="0.393150777944511" y1="-2.12572006679471" x2="0.36466834284167" y2="12.9276514859036" spreadMethod="pad">
+   <stop stop-color="#ceba9b" offset="0" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.125" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="0.25" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.375" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="0.5" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.625" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="0.75" stop-opacity="1"/>
+   <stop stop-color="#f1e2c5" offset="0.875" stop-opacity="1"/>
+   <stop stop-color="#ceba9b" offset="1" stop-opacity="1"/>
+  </linearGradient>
+ </defs>
+<rect id="shape0" transform="translate(30.1668849543327, 40.923282205456)" fill="url(#gradient0)" fill-rule="evenodd" stroke="none" stroke-width="2.88" stroke-linecap="square" stroke-linejoin="bevel" width="299.638104945168" height="1394.01000125017"/><rect id="shape04" transform="matrix(2.48644230901068 0 0 -2.0711116691684 2.22236734103296 29.4299999757752)" fill="url(#gradient1)" stroke="none" stroke-width="1.44" stroke-linecap="square" stroke-linejoin="bevel" width="142.997592998409" height="17.077785083934"/><path id="shape03" transform="matrix(-2.48644230901068 0 0 2.0711116691684 351.648259524287 27.8755027290432)" fill="url(#gradient2)" stroke="none" stroke-width="1.44" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2.16000008583069" d="M0 0C4.74 1.32 7.67378 4.02217 8.85378 8.10217L128.991 8.83114C130.171 4.75114 133.361 1.66872 138.101 0.348725C92.0672 0.232483 46.0336 0.116242 0 0Z" sodipodi:nodetypes="ccccc"/><rect id="shape041" transform="matrix(2.48644230901068 0 0 2.0711116691684 2.2223673410327 1447.77514807728)" fill="url(#gradient3)" stroke="none" stroke-width="1.44" stroke-linecap="square" stroke-linejoin="bevel" width="142.997592998409" height="12.9325966926141"/><path id="shape031" transform="matrix(-2.48644230901068 0 0 -2.0711116691684 351.648259524286 1448.12449722686)" fill="url(#gradient4)" stroke="none" stroke-width="1.44" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="2.16" d="M0 0C4.74 1.32 7.67378 4.02217 8.85378 8.10217L128.991 8.83114C130.171 4.75114 133.361 1.66872 138.101 0.348725C92.0672 0.232483 46.0336 0.116242 0 0Z" sodipodi:nodetypes="ccccc"/>
+</svg>

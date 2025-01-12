@@ -7,7 +7,7 @@ import Shoes from "./Shoes.jsx";
 import Clothes from "./Clothes.jsx";
 import Swimsuits from "./Swimsuits.jsx";
 import { Routes, Route, Navigate } from "react-router";
-import CardDetails from "../../Utilities/CardDetails.jsx";
+import CardDetails from "./CardDetails.jsx";
 
 function Content() {
   return (

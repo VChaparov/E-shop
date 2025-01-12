@@ -9,7 +9,9 @@ function Layout() {
       <Header />
       <div className="body-container">
         <SideBar />
-        <Content />
+        <div className="content-wrapper">
+          <Content />
+        </div>
       </div>
     </>
   );

@@ -5,7 +5,7 @@ function SideBar(){
     <div className="side-bar">
          <SideLink title="Shoes" url="/Products/Shoes" />
          <SideLink title="Clothes" url="/Products/Clothes" />
-         <SideLink title="Swimsuits" url="/Products/Swimsuits" />
+         <SideLink title="Swimsuits" url="/Products/Swimsuits" />   
     </div>)
     }
 
