@@ -3,6 +3,7 @@ html {
   height: 100%;
   background-image: url("/images/background.png");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 body {
   height: 100%;
@@ -42,7 +43,7 @@ body {
   width: 10em;
   height: 2em;
   margin: 10px;
-  background-color: rgb(6, 53, 7);
+  background-color: rgba(0,6, 53, 0.7 );
   box-shadow: 1px 1px 2px black;
   border-radius: 7px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -54,6 +55,7 @@ body {
 }
 
 .side-link:hover {
+  background-color: rgba(0,6, 53, 1 );
   text-shadow: rgb(28, 92, 189) 1px 0 10px;
   color: aquamarine;
   translate: 2px 0px;
@@ -69,7 +71,7 @@ body {
   width: 6em;
   margin: 0 10px 0 10px;
   height: 2em;
-  background-color: rgb(6, 53, 7);
+  background-color: rgba(6, 53, 7,0.7);
   box-shadow: 1px 1px 2px black;
   border-radius: 7px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -82,17 +84,24 @@ body {
 .nav-link:hover {
   text-shadow: rgb(28, 92, 189) 1px 0 10px;
   color: aquamarine;
+  background-color: rgba(6, 53, 7,1);
   translate: 0 2px;
 }
 .logo {
+  filter: drop-shadow( 3px 3px 2px rgba(135, 24, 24, 0.7));
   display: flex;
   width: 12em;
   justify-content: center;
   align-content: center;
+  
 }
 .logo img {
+  transition: all 0.1s ease-in-out;
   width: 70px;
   height: 70px;
+}
+.logo img:hover{
+  scale:1.1;   
 }
 .header {
   z-index: 1;
@@ -106,4 +115,48 @@ body {
   box-shadow: 0px 3px 8px black;
   align-items: end;
   align-content: center;
+}
+
+.home-container{
+  display: block;
+  height: 50%;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.hero {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(80, 2, 2);
+  text-shadow: 2px 2px 5px #000;
+}
+.hero img{
+  height: 100%;
+}
+.hero h1 {
+  font-size: 3rem;
+}
+.featured-products {
+  height: 50%;
+  padding: 2rem;
+  text-align: center;
+}
+.products-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.product {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  width: 200px;
+}
+.product img {
+  width: 100%;
+  border-radius: 8px;
 }
