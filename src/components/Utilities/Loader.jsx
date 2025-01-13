@@ -6,7 +6,7 @@ function Loader() {
     <div className="loader">
       <PuffLoader
         size={150}
-        color="rgb(25, 121, 25)"
+        color="rgb(242, 253, 242)"
         aria-label="Loading Spinner"
       />
     </div>

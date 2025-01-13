@@ -10,7 +10,7 @@ function Layout() {
       <div className="body-container">
         <SideBar />
         <div className="content-wrapper">
-          <Content />
+        <Content />
         </div>
       </div>
     </>

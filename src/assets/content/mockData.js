@@ -5,6 +5,7 @@ export const SwimsuitsData = [
     name: "Marius",
     category: "Swimsuits",
     imgURL: "Swimsuits/Swimsuit_1",
+    "featured" : 1,
     description:
       "cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et",
   },
@@ -13,6 +14,7 @@ export const SwimsuitsData = [
     name: "Lady in the Water",
     category: "Swimsuits",
     imgURL: "Swimsuits/Swimsuit_1",
+    "featured" : 1,
     description:
       "metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in",
   },
@@ -21,6 +23,7 @@ export const SwimsuitsData = [
     name: "Enter the Void",
     category: "Swimsuits",
     imgURL: "Swimsuits/Swimsuit_1",
+    "featured" : 1,
     description:
       "vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque",
   },
@@ -29,6 +32,7 @@ export const SwimsuitsData = [
     name: "The Last Wagon",
     category: "Swimsuits",
     imgURL: "Swimsuits/Swimsuit_1",
+    "featured" : 1,
     description:
       "non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar",
   },

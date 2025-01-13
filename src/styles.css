@@ -1,11 +1,12 @@
 html {
-  width: 100%;
   height: 100%;
-  background-image: url("/images/background.png");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-image: url("/images/protruding-squares.svg");
+}
+svg{
+  color: white;
 }
 body {
+  overflow: scroll;
   height: 100%;
   min-width: 30em;
   margin: 0;
@@ -14,37 +15,76 @@ body {
 #root {
   height: 100%;
 }
-.body-container {
-  position: relative;
-  top: 6em;
+.header {
+  z-index: 1;
+  position: fixed;
   display: inline-flex;
   width: 100%;
-  height: 100%;
+  height: 4em;
+  padding: 15px 0 5px 0;
+  background-color: rgba(0, 6, 53, 0.7);
+  box-shadow: 0px 3px 8px black;
+  align-items: end;
+  align-content: center;
+}
+
+.header-bars {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  display: inline-flex;
+  width: 100%;
+}
+.search-bar{
+  margin-bottom: 10px;
+  width:85%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.search-bar input{
+  background-color:#f0f5f3;
+  border-width: 0px;
+  border-radius: 15px;
+  height: 20px;
+  max-width: 40em;
+  width: 100%;
+  text-indent: 10px;
+}
+.search-bar input:focus{
+  outline: none;
+}
+.body-container {
+  padding: 0;
+  position: relative;
+  top: 7em;
+  display: inline-flex;
+  width: 100%;
   justify-items: center;
+}
+a:focus{
+  outline: none;
 }
 .side-bar {
   display: block;
   height: 100%;
   width: 13em;
-  margin-top: 5px;
+  min-height: 49em;
   scrollbar-width: none;
   scrollbar-width: 1px;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  scroll-behavior: auto;
-  background-size:100%;
+  overflow: hidden;
+  background-size: 100%;
   background-position: right top;
   background-repeat: repeat-y;
-  background-image: url("/public/images/column.svg");
   object-fit: fill;
 }
 .side-link {
+  background-color: rgba(0, 6, 53, 0.7);
   display: flex;
   width: 10em;
   height: 2em;
   margin: 10px;
-  background-color: rgba(0,6, 53, 0.7 );
-  box-shadow: 1px 1px 2px black;
+  box-shadow: 3px 3px 5px black;
   border-radius: 7px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(255, 255, 255);
@@ -55,14 +95,20 @@ body {
 }
 
 .side-link:hover {
-  background-color: rgba(0,6, 53, 1 );
+  background-color: #000635;
+  text-shadow: rgb(28, 92, 189) 1px 0 10px;
+  color: aquamarine;
+  translate: 2px 0px;
+}
+a:focus>.side-link{
+  background-color: #000635;
   text-shadow: rgb(28, 92, 189) 1px 0 10px;
   color: aquamarine;
   translate: 2px 0px;
 }
 .nav-bar {
   display: flex;
-  width: 90%;
+  width: 85%;
   justify-content: center;
   justify-self: center;
 }
@@ -71,53 +117,49 @@ body {
   width: 6em;
   margin: 0 10px 0 10px;
   height: 2em;
-  background-color: rgba(6, 53, 7,0.7);
-  box-shadow: 1px 1px 2px black;
+  color: #000c68;
+  box-shadow: 2px 2px 2px black;
   border-radius: 7px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: rgb(255, 255, 255);
+  background-color: #ffb53e;
   align-items: center;
   text-align: center;
   justify-content: center;
   transition: all 0.1s ease-in-out;
 }
 .nav-link:hover {
-  text-shadow: rgb(28, 92, 189) 1px 0 10px;
-  color: aquamarine;
-  background-color: rgba(6, 53, 7,1);
+  text-shadow: rgb(7, 1, 29) 1px 0 10px;
+  color:#00142f;
+  background-color: #ff9d00;
+  box-shadow: 1px 1px 2px black;
+  translate: 0 2px;
+}
+a:focus>.nav-link {
+  outline: none;
+  text-shadow: rgb(7, 1, 29) 1px 0 10px;
+  color:#00142f;
+  background-color: #ff9d00;
+  box-shadow: 1px 1px 2px black;
   translate: 0 2px;
 }
 .logo {
-  filter: drop-shadow( 3px 3px 2px rgba(135, 24, 24, 0.7));
   display: flex;
   width: 12em;
   justify-content: center;
   align-content: center;
-  
+  filter: drop-shadow(2px 2px 3px rgb(154, 95, 0));
 }
 .logo img {
   transition: all 0.1s ease-in-out;
   width: 70px;
   height: 70px;
+  filter:brightness(110%) contrast(150%) invert()
 }
-.logo img:hover{
-  scale:1.1;   
-}
-.header {
-  z-index: 1;
-
-  position: fixed;
-  display: inline-flex;
-  width: 100%;
-  height: 4em;
-  padding: 1em;
-  background-image: linear-gradient(bisque,#ceba9b,bisque);
-  box-shadow: 0px 3px 8px black;
-  align-items: end;
-  align-content: center;
+.logo img:hover {
+  scale: 1.1;
 }
 
-.home-container{
+.home-container {
   display: block;
   height: 50%;
   flex-direction: column;
@@ -132,8 +174,9 @@ body {
   color: rgb(80, 2, 2);
   text-shadow: 2px 2px 5px #000;
 }
-.hero img{
+.hero img {
   height: 100%;
+  width: 90%;
 }
 .hero h1 {
   font-size: 3rem;
@@ -158,5 +201,6 @@ body {
 }
 .product img {
   width: 100%;
+  height: 300px;
   border-radius: 8px;
 }
