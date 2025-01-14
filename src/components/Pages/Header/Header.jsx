@@ -1,19 +1,22 @@
 import NavBar from "./Navbar/NavBar";
 import SearchBar from "./SearchBar";
 import Logo from "/images/logo.svg";
+import MenuDrawer from "./MenuDrawer"
+import { Box } from "@mui/material";
 
 function Header() {
   return (
     <>
-      <div className="header">
-        <div className="logo">
+      <Box className="header">
+        <Box className="logo">
           <img src={Logo} alt="logo.svg"></img>
-        </div>
-        <div className="header-bars">
+        </Box>
+        <Box className="header-bars">
           <SearchBar />
           <NavBar />
-        </div>
-      </div>
+        </Box>
+        <MenuDrawer />
+      </Box>
     </>
   );
 }

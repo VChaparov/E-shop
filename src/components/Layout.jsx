@@ -1,18 +1,18 @@
 import Header from "./Pages/Header/Header.jsx";
 import SideBar from "./Pages/Sidebar/SideBar.jsx";
-
+import {Box} from "@mui/material"
 import Content from "./Pages/Content/Content.jsx";
 
 function Layout() {
   return (
     <>
       <Header />
-      <div className="body-container">
+      <Box className="body-container">
         <SideBar />
-        <div className="content-wrapper">
+        <Box className="content-wrapper">
         <Content />
-        </div>
-      </div>
+        </Box>
+      </Box>
     </>
   );
 }

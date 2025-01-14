@@ -1,11 +1,26 @@
 import "./utilitiesStyles.css";
+import { Box } from "@mui/material";
 
 function Card(props) {
   return (
-    <div className="card">
-      <img className="card-image" src={`${import.meta.env.BASE_URL}/images/${props.imgURL}.jpg`}></img>
-      <div className="name">{props.name}</div>
-    </div>
+    <Box
+      className="card"
+      sx={{
+        width: { xs: "6em", sm: "7em", md: "9em", lg: "12em" },
+        height: { xs: "8em", sm: "9em", md: "11em", lg: "14em" },
+      }}
+    >
+      <img
+        className="card-image"
+        src={`${import.meta.env.BASE_URL}/images/${props.imgURL}.jpg`}
+      ></img>
+      <Box
+        sx={{ fontSize: { xs: "6pt", sm: "8pt", md: "10pt", lg: "12pt" } }}
+        className="name"
+      >
+        {props.name}
+      </Box>
+    </Box>
   );
 }
 

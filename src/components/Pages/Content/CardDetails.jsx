@@ -3,6 +3,7 @@ import { useParams, Navigate } from "react-router";
 import sleep from "../../Utilities/sleep";
 import fetchProduct from "../../Utilities/fetchproduct";
 import Loader from "../../Utilities/Loader";
+import { Box } from "@mui/material";
 
 //added sleep function to simulate resource fetching
 function CardDetails() {
@@ -26,17 +27,18 @@ function CardDetails() {
     return <Navigate to="/NotFound" replace />;
 
   var item = query.data[0];
-
+  var URL= `${import.meta.env.BASE_URL}images/${item.imgURL}.jpg`;
+  console.log(URL)
   return (
-    <div className="card-details">
-      <img
+    <Box className="card-details">
+      <Box
         className="card-detail-image"
-        src={`${import.meta.env.BASE_URL}/images/${item.imgURL}.jpg`}
-      ></img>
-      <div className="card-info">
-        <div className="card-details-name">{item.name}</div>
-      </div>
-    </div>
+        sx={{ height: { xs: "13em", sm: "18em", md: "23em", lg: "28em" },width:{xs:"12em",sm:"17em",md:"22em",lg:"27em",}, backgroundImage:`url(${URL})`,backgroundSize:"contain",backgroundRepeat:"no-repeat"}}
+      ></Box>
+      <Box className="card-info">
+        <Box className="card-details-name">{item.name}</Box>
+      </Box>
+    </Box>
   );
 }
 export default CardDetails;

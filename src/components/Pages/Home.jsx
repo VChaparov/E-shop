@@ -1,10 +1,13 @@
-import hero from "/images/hero.jpg";
 import { useQuery } from "react-query";
 import Loader from "../Utilities/Loader";
 import fetchFeatured from "../Utilities/fetchFeatured";
 import sleep from "../Utilities/sleep";
+import { Box } from "@mui/material";
+import Card from "../Utilities/Card";
+import CardList from "../Utilities/CardList";
 
 function Home() {
+  const hero = `${import.meta.env.BASE_URL}/images/hero.jpg`;
   const query = useQuery({
     queryKey: [`featured`],
     queryFn: () => sleep(1000).then(() => fetchFeatured()),
@@ -22,31 +25,31 @@ function Home() {
   var items = query.data;
 
   return (
-    <div className="home-container">
-      <div className="hero">
-        <img src={hero} alt="offers" />
-      </div>
-      <div className="featured-products">
+    <Box className="home-container">
+      <Box className="hero">
+        <Box 
+        sx={{backgroundImage:`url("${hero}")`, backgroundSize:"cover", height:"50%", width:"50%"}}
+        alt="offers"></Box>
+      </Box>
+      <Box className="featured-products">
         <h2>Featured Products</h2>
-        <div className="products-container">
-          <div className="product">
-            <img src={`${import.meta.env.BASE_URL}/images/${items[0].imgURL}.jpg`} alt="Product 1" />
-            <h3>Product 1</h3>
-            <p>$29.99</p>
-          </div>
-          <div className="product">
-            <img src={`${import.meta.env.BASE_URL}/images/${items[1].imgURL}.jpg`} alt="Product 2" />
-            <h3>Product 2</h3>
-            <p>$49.99</p>
-          </div>
-          <div className="product">
-            <img src={`${import.meta.env.BASE_URL}/images/${items[2].imgURL}.jpg`} alt="Product 3" />
-            <h3>Product 3</h3>
-            <p>$19.99</p>
-          </div>
-        </div>
-      </div>
-    </div>
+        <Box
+          className="content-grid"
+          sx={{
+            gridTemplateColumns: {
+              xs: "repeat(3, minmax(7em, 7em))",
+              sm: "repeat(3, minmax(8em, 8em))",
+              md: " repeat(3, minmax(10em, 10em))",
+              lg: " repeat(3, minmax(13em, 13em))",
+            },
+            gridAutoRows: { xs: "9em", sm: "10em", md: "12em", lg: "15em" },
+            gap: { xs: "0.5em", sm: "0.7em", md: "0.7em", lg: "1em" },
+          }}
+        >
+          <CardList cards={items} />
+        </Box>
+      </Box>
+    </Box>
   );
 }
 
