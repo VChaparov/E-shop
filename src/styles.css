@@ -35,25 +35,47 @@ body {
   display: inline-flex;
   width: 100%;
 }
-.search-bar{
+.search-box{
+  font-size: 17pt;
+  height: 30px;
+  margin-top:10px;
   margin-bottom: 10px;
-  width:85%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  width: 50%;
 }
-.search-bar input{
-  background-color:#f0f5f3;
-  border-width: 0px;
-  border-radius: 15px;
-  height: 20px;
-  max-width: 40em;
+#search-dropdown-container{
+  color:white;
   width: 100%;
-  text-indent: 10px;
+  margin: 0;
+  padding: 2px;
+  top:-15px;
+  position: relative;
+  border-radius:10px;
+  z-index: 1;
+  display: none;
+  background-color: #099585;
 }
-.search-bar input:focus{
+#search-dropdown{
+  text-indent: 0;
+  margin: 0;
+  padding: 5px;
+  list-style-type: none;
+}
+.search-box input{
+  font-size: 17pt;
+  color: white;
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  text-indent: 10px;
+  border-width: 0;
+  border-radius: 10px;
+  background-color: #099585;
+  width: 100%;
+}
+.search-box input:focus{
   outline: none;
 }
+
 .body-container {
   padding: 0;
   position: relative;
@@ -97,13 +119,13 @@ a:focus{
 .side-link:hover {
   background-color: #000635;
   text-shadow: rgb(28, 92, 189) 1px 0 10px;
-  color: aquamarine;
+  color: rgb(127, 210, 255);
   translate: 2px 0px;
 }
 a:focus>.side-link{
   background-color: #000635;
   text-shadow: rgb(28, 92, 189) 1px 0 10px;
-  color: aquamarine;
+  color: rgb(127, 210, 255);
   translate: 2px 0px;
 }
 .nav-bar {
@@ -117,11 +139,11 @@ a:focus>.side-link{
   width: 6em;
   margin: 0 10px 0 10px;
   height: 2em;
-  color: #000c68;
+  color: white;
   box-shadow: 2px 2px 2px black;
   border-radius: 7px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #ffb53e;
+  background-color: #099585;
   align-items: center;
   text-align: center;
   justify-content: center;
@@ -129,16 +151,16 @@ a:focus>.side-link{
 }
 .nav-link:hover {
   text-shadow: rgb(7, 1, 29) 1px 0 10px;
-  color:#00142f;
-  background-color: #ff9d00;
+  color:#4ffecd;
+  background-color: #16514a;
   box-shadow: 1px 1px 2px black;
   translate: 0 2px;
 }
 a:focus>.nav-link {
   outline: none;
   text-shadow: rgb(7, 1, 29) 1px 0 10px;
-  color:#00142f;
-  background-color: #ff9d00;
+  color:#4ffecd;
+  background-color: #16514a;
   box-shadow: 1px 1px 2px black;
   translate: 0 2px;
 }
