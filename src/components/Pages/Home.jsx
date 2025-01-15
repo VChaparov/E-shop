@@ -27,9 +27,15 @@ function Home() {
   return (
     <Box className="home-container">
       <Box className="hero">
-        <Box 
-        sx={{backgroundImage:`url("${hero}")`, backgroundSize:"cover", height:"50%", width:"50%"}}
-        alt="offers"></Box>
+        <Box
+          sx={{
+            backgroundImage: `url("${hero}")`,
+            backgroundSize: "cover",
+            height: "50%",
+            width: "50%",
+          }}
+          alt="offers"
+        ></Box>
       </Box>
       <Box className="featured-products">
         <h2>Featured Products</h2>

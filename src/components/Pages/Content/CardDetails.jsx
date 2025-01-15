@@ -27,16 +27,59 @@ function CardDetails() {
     return <Navigate to="/NotFound" replace />;
 
   var item = query.data[0];
-  var URL= `${import.meta.env.BASE_URL}images/${item.imgURL}.jpg`;
-  console.log(URL)
+  var URL = `${import.meta.env.BASE_URL}images/${item.imgURL}.jpg`;
   return (
-    <Box className="card-details">
+    <Box
+      sx={{
+        display: "flex",
+        flexDirection: {
+          xs: "column",
+          md: "row",
+        },
+        width: "100%",
+        height: "100%",
+        justifyContent: "center",
+      }}
+      className="card-details"
+    >
       <Box
         className="card-detail-image"
-        sx={{ height: { xs: "13em", sm: "18em", md: "23em", lg: "28em" },width:{xs:"12em",sm:"17em",md:"22em",lg:"27em",}, backgroundImage:`url(${URL})`,backgroundSize:"contain",backgroundRepeat:"no-repeat"}}
+        sx={{
+          height: { xs: "13em", sm: "18em", md: "23em", lg: "28em" },
+          width: { xs: "12em", sm: "17em", md: "22em", lg: "27em" },
+          backgroundImage: `url(${URL})`,
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+
+          display: "flex",
+          padding: "0",
+          margin: "2em",
+          objectFit: "contain",
+          justifyContent: "start",
+        }}
       ></Box>
-      <Box className="card-info">
-        <Box className="card-details-name">{item.name}</Box>
+      <Box
+        sx={{ display: "flex", justifyContent: "flex-start", width: "100%" }}
+        className="card-info"
+      >
+        <Box
+          sx={{
+            height: { xs: "2em", sm: "2em", md: "3em", lg: "3em" },
+            width: { xs: "12em", sm: "17em", md: "22em", lg: "27em" },
+            fontSize: { xs: "8pt", sm: "10pt", md: "12pt" },
+            display: "flex",
+            float: "right",
+            backgroundColor: "antiquewhite",
+            color: "rgb(80, 10, 27)",
+            fontWeight: "bold",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+          className="card-details-name"
+        >
+          {item.name}
+        </Box>
       </Box>
     </Box>
   );

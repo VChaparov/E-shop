@@ -1,104 +1,95 @@
 html {
-  height: 100%;
+  width: auto;
+  display: block;
   background-image: url("/images/protruding-squares.svg");
 }
-svg{
+svg {
   color: white;
 }
 body {
-  overflow: scroll;
-  height: 100%;
-  min-width: 30em;
+  display: block;
   margin: 0;
   padding: 0;
+  width: auto;
 }
 #root {
-  height: 100%;
+  width: auto;
 }
 .header {
   z-index: 1;
   position: fixed;
   display: inline-flex;
-  width: 100%;
   height: 4em;
-  padding: 15px 0 5px 0;
   background-color: rgba(0, 6, 53, 0.7);
   box-shadow: 0px 3px 8px black;
-  align-items: end;
-  align-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .header-bars {
-  min-width: 20em;
   display: flex;
   flex-direction: column;
   align-items: center;
   display: inline-flex;
-  width: 100%;
 }
-.search-box{
+.search-box {
   font-size: 20pt;
-  height: 30px;
-  margin-top:10px;
-  width: 50%;
 }
-#search-dropdown-container{
-  color:white;
+#search-dropdown-container {
+  color: white;
   width: 100%;
   margin: 0;
   padding: 0;
-  top:-15px;
+  top: -15px;
   position: relative;
-  border-radius:10px;
+  border-radius: 10px;
   z-index: 1;
-  display: none;
-  background-color: #099585;
+  background-color: rgb(9, 149, 133);
 }
-#search-dropdown{
+#search-dropdown {
   text-indent: 0;
   margin: 0;
   padding: 5px;
   list-style-type: none;
 }
-#search-bar{
+#search-bar {
   color: white;
   position: relative;
   z-index: 2;
-  height: 100%;
   text-indent: 10px;
   border-width: 0;
   border-radius: 10px;
   background-color: #099585;
-  width: 100%;
 }
-.search-box input:focus{
+.search-box input:focus {
   outline: none;
 }
 
 .body-container {
+  width: 100%;
   padding: 0;
   position: relative;
-  top: 7em;
+  top: 70px;
   display: inline-flex;
-  width: 100%;
   justify-items: center;
 }
-a:focus{
+a:focus {
   outline: none;
 }
 .side-bar {
-  display: block;
+  display: flex;
+  flex-direction: column;
   padding: 15px;
   height: 100%;
-  min-height: 49em;
   scrollbar-width: none;
   scrollbar-width: 1px;
   overflow: hidden;
+  align-items: center;
 }
 .side-link {
   background-color: rgba(0, 6, 53, 0.7);
   display: flex;
-  margin:10px;
+  margin: 10px;
   box-shadow: 3px 3px 5px black;
   border-radius: 7px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -115,7 +106,7 @@ a:focus{
   color: rgb(127, 210, 255);
   translate: 2px 0px;
 }
-a:focus>.side-link{
+a:focus > .side-link {
   background-color: #000635;
   text-shadow: rgb(28, 92, 189) 1px 0 10px;
   color: rgb(127, 210, 255);
@@ -129,9 +120,6 @@ a:focus>.side-link{
 }
 .nav-link {
   display: flex;
-  width: 6em;
-  margin: 14px 10px 0 10px;
-  height: 2em;
   color: white;
   box-shadow: 2px 2px 2px black;
   border-radius: 7px;
@@ -144,15 +132,15 @@ a:focus>.side-link{
 }
 .nav-link:hover {
   text-shadow: rgb(7, 1, 29) 1px 0 10px;
-  color:#4ffecd;
+  color: #4ffecd;
   background-color: #16514a;
   box-shadow: 1px 1px 2px black;
   translate: 0 2px;
 }
-a:focus>.nav-link {
+a:focus > .nav-link {
   outline: none;
   text-shadow: rgb(7, 1, 29) 1px 0 10px;
-  color:#4ffecd;
+  color: #4ffecd;
   background-color: #16514a;
   box-shadow: 1px 1px 2px black;
   translate: 0 2px;
@@ -160,16 +148,16 @@ a:focus>.nav-link {
 .logo {
   display: flex;
   width: 12em;
-  min-width: 70px;
+  min-width: 60px;
   justify-content: center;
   align-content: center;
   filter: drop-shadow(2px 2px 3px rgb(154, 95, 0));
 }
 .logo img {
   transition: all 0.1s ease-in-out;
-  width: 70px;
-  height: 70px;
-  filter:brightness(110%) contrast(150%) invert()
+  width: 50px;
+  height: 50px;
+  filter: brightness(110%) contrast(150%) invert();
 }
 .logo img:hover {
   scale: 1.1;

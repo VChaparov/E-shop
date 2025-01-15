@@ -7,7 +7,9 @@ function Layout() {
   return (
     <>
       <Header />
-      <Box className="body-container">
+      <Box className="body-container"
+      
+      sx={{}}>
         <SideBar />
         <Box className="content-wrapper">
         <Content />

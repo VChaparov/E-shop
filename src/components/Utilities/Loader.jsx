@@ -1,15 +1,16 @@
 import { PuffLoader } from "react-spinners";
+import {Box} from "@mui/material"
 import "./utilitiesStyles.css";
 
-function Loader() {
+function Loader() { 
   return (
-    <div className="loader">
+    <Box className="loader">
       <PuffLoader
         size={150}
         color="rgb(242, 253, 242)"
         aria-label="Loading Spinner"
       />
-    </div>
+    </Box>
   );
 }
 export default Loader;

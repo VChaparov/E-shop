@@ -1,6 +1,4 @@
 
-
-
 export function dropdownShow() {
   const searchDropdown = document.getElementById('search-dropdown-container');
 

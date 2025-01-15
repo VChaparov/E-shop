@@ -5,7 +5,7 @@ function SideBar() {
     <Box
       className="side-bar"
       sx={{
-        width: { xs: "10em", sm: "10em", md: "13em", lg: "15em" },
+        width: { xs: "6em", sm: "10em", md: "13em", lg: "15em" },
         minWidth: "5em",
       }}
     >
