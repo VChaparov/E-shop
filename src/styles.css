@@ -35,32 +35,13 @@ body {
 .search-box {
   font-size: 20pt;
 }
-#search-dropdown-container {
-  color: white;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  top: -15px;
-  position: relative;
-  border-radius: 10px;
-  z-index: 1;
-  background-color: rgb(9, 149, 133);
-}
 #search-dropdown {
   text-indent: 0;
   margin: 0;
   padding: 5px;
   list-style-type: none;
 }
-#search-bar {
-  color: white;
-  position: relative;
-  z-index: 2;
-  text-indent: 10px;
-  border-width: 0;
-  border-radius: 10px;
-  background-color: #099585;
-}
+
 .search-box input:focus {
   outline: none;
 }
