@@ -2,6 +2,7 @@ import "./utilitiesStyles.css";
 import { Box } from "@mui/material";
 
 function Card(props) {
+  var URL = `${import.meta.env.BASE_URL}/images/${props.imgURL}.jpg`;
   return (
     <Box
       className="card"
@@ -10,10 +11,14 @@ function Card(props) {
         height: { xs: "8em", sm: "9em", md: "11em", lg: "14em" },
       }}
     >
-      <img
+      <Box
         className="card-image"
-        src={`${import.meta.env.BASE_URL}/images/${props.imgURL}.jpg`}
-      ></img>
+        sx={{
+          backgroundImage: `url(${URL})`,
+          backgroundSize: "contain",
+          backgroundRepeat: "no-repeat",
+        }}
+      ></Box>
       <Box
         sx={{ fontSize: { xs: "6pt", sm: "8pt", md: "10pt", lg: "12pt" } }}
         className="name"

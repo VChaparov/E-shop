@@ -1,4 +1,4 @@
-import fetchSwimsuits from "../../../assets/content/mockData";
+import fetchSwimsuits from "../../../assets/content/SwimsuitData";
 import CardList from "../../Utilities/CardList";
 import { useQuery } from "react-query";
 import sleep from "../../Utilities/sleep";

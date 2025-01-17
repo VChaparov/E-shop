@@ -1,6 +1,6 @@
 import fetchShoes from "../../assets/content/ShoeData";
 import fetchClothes from "../../assets/content/ClothesData";
-import fetchSwimsuits from "../../assets/content/mockData";
+import fetchSwimsuits from "../../assets/content/SwimsuitData";
 
 export default function fetchFeatured() {
   var items = [

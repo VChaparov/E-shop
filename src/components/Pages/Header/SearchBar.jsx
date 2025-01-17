@@ -1,16 +1,17 @@
-import NavLink from "./Navbar/NavLink";
 import { useState } from "react";
+import { useNavigate } from "react-router";
 import Box from "@mui/material/Box";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
 import { Popper, InputBase, Fade, Paper, Typography } from "@mui/material";
-import zIndex from "@mui/material/styles/zIndex";
+import featchSearch from "../../Utilities/featchSearch";
+import ResultsList from "../../Utilities/ResultsList";
 
 export default function SearchBar() {
   const [search, setSearch] = useState("");
+  const [items, setItems] = useState({});
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
+    if (e.target.value !== undefined) setItems(featchSearch(e.target.value));
   };
   const [anchorEl, setAnchorEl] = useState(null);
   const [open, setOpen] = useState(false);
@@ -22,6 +23,7 @@ export default function SearchBar() {
     setPlacement(newPlacement);
   };
 
+  const navigate = useNavigate();
   return (
     <>
       <Box
@@ -35,7 +37,6 @@ export default function SearchBar() {
             "& .MuiInputBase-input": {
               position: "relative",
               color: "white",
-              position: "relative",
               zIndex: "3",
               textIndent: "10px",
               borderWidth: "0",
@@ -50,11 +51,20 @@ export default function SearchBar() {
           value={search}
           onKeyDown={(e) => {
             if (e.key === "Escape") {
+              setOpen(false);
+              setSearch("");
+              setItems({});
+            }
+            if (e.key === "Enter") {
+              setOpen(false);
+              navigate(`/Search/${encodeURIComponent(search.trim())}`);
               setSearch("");
             }
           }}
-          onChange={(e) => updateSearch(e)}
-          onFocus={() => handleClick("bottom")}
+          onChange={(e) => {
+            updateSearch(e);
+            setOpen(true);
+          }}
           onBlur={() => setOpen(false)}
         />
       </Box>
@@ -82,6 +92,7 @@ export default function SearchBar() {
               <Paper
                 sx={{
                   display: { xs: "none", sm: "flex" },
+                  flexDirection: "column",
                   justifyContent: "center",
                   backgroundColor: "rgba(9, 149, 133, 0.7)",
                   color: "white",
@@ -96,10 +107,11 @@ export default function SearchBar() {
                   padding: "10px",
                 }}
               >
-                <br />
-                Search Results Here!
-                <br />
-                Search Results Here!
+                {items.length > 0 ? (
+                  <ResultsList cards={items} />
+                ) : (
+                  <Box>Search Results</Box>
+                )}
               </Paper>
             </Box>
           </Fade>

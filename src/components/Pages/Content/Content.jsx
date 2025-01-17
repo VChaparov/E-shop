@@ -8,6 +8,7 @@ import Clothes from "./Clothes.jsx";
 import Swimsuits from "./Swimsuits.jsx";
 import { Routes, Route, Navigate } from "react-router";
 import CardDetails from "./CardDetails.jsx";
+import SearchResult from "./SearchResult.jsx";
 
 function Content() {
   return (
@@ -23,6 +24,7 @@ function Content() {
         <Route path="/Products/Swimsuits" element={<Swimsuits />} />
         <Route path="*" element={<Navigate to="/NotFound" replace />} />
         <Route path="/NotFound" element={<NotFoundPage />} />
+        <Route path="/Search/:query" element={<SearchResult />} />
       </Routes>
     </>
   );

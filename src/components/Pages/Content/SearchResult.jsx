@@ -1,23 +1,27 @@
-import fetchShoes from "../../../assets/content/ShoeData";
-import fetchClothes from "../../../assets/content/ClothesData";
-import fetchSwimsuits from "../../../assets/content/SwimsuitData";
+import featchSearch from "../../Utilities/featchSearch";
 import CardList from "../../Utilities/CardList";
 import { useQuery } from "react-query";
 import sleep from "../../Utilities/sleep";
 import Loader from "../../Utilities/Loader";
+import { useEffect } from "react";
 import { Box } from "@mui/material";
+import { useParams } from "react-router";
 
-//added sleep function to simulate resource fetching
-function Products() {
-  function fetchProducts() {
-    const data = [...fetchShoes(), ...fetchClothes(), ...fetchSwimsuits()];
-    return data;
-  }
+function SearchResult() {
+  let params = useParams();
 
   const query = useQuery({
-    queryKey: ["products"],
-    queryFn: () => sleep(600).then(() => fetchProducts),
+    queryKey: ["products", params.query],
+    queryFn: () => sleep(600).then(() => featchSearch(params.query)),
+    enabled: !!params.query,
   });
+
+  useEffect(() => {
+    if (params.query) {
+        console.log("change!")
+      query.refetch();
+    }
+  }, [params.query]);
 
   if (query.isLoading) {
     return <Loader />;
@@ -26,6 +30,7 @@ function Products() {
   if (query.isError) {
     return <pre>{JSON.stringify(query.error)}</pre>;
   }
+
   return (
     <Box
       className="content-grid"
@@ -45,4 +50,4 @@ function Products() {
   );
 }
 
-export default Products;
+export default SearchResult;
