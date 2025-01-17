@@ -25,7 +25,7 @@ export default function MenuDrawer() {
         aria-label="open drawer"
         edge="start"
         onClick={OpenPopover}
-        sx={{ display: { xs: "flex", md: "none" }, margin: "5px", padding:"0"}}
+        sx={{ display: { xs: "flex", md: "none" }, margin: "5px", padding:"0" }}
       >
         <MenuIcon  />
       </IconButton>

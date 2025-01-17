@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
 import Box from "@mui/material/Box";
 import { Popper, InputBase, Fade, Paper, Typography } from "@mui/material";
@@ -12,7 +12,11 @@ export default function SearchBar() {
   const updateSearch = (e) => {
     setSearch(e.target.value);
     if (e.target.value !== undefined) setItems(featchSearch(e.target.value));
+    if (e.target.value == "") {
+      setItems({});
+    }
   };
+
   const [anchorEl, setAnchorEl] = useState(null);
   const [open, setOpen] = useState(false);
   const [placement, setPlacement] = useState();
@@ -22,8 +26,8 @@ export default function SearchBar() {
     setOpen((prev) => placement !== newPlacement || !prev);
     setPlacement(newPlacement);
   };
-
   const navigate = useNavigate();
+
   return (
     <>
       <Box
@@ -37,7 +41,7 @@ export default function SearchBar() {
             "& .MuiInputBase-input": {
               position: "relative",
               color: "white",
-              zIndex: "3",
+              zIndex: "10",
               textIndent: "10px",
               borderWidth: "0",
               borderRadius: "10px",
@@ -65,11 +69,11 @@ export default function SearchBar() {
             updateSearch(e);
             setOpen(true);
           }}
-          onBlur={() => setOpen(false)}
+          //onBlur={() => setOpen(false)}
         />
       </Box>
       <Popper
-        sx={{ zIndex: 1200 }}
+        sx={{ position: "relative", zIndex: 5 }}
         open={open}
         anchorEl={anchorEl}
         placement={placement}
@@ -90,6 +94,7 @@ export default function SearchBar() {
               }}
             >
               <Paper
+                onClick={() => setSearch("")}
                 sx={{
                   display: { xs: "none", sm: "flex" },
                   flexDirection: "column",
@@ -98,12 +103,12 @@ export default function SearchBar() {
                   color: "white",
                   width: "99%",
                   position: "relative",
-                  zIndex: " 1",
+                  zIndex: " 5",
                   textIndent: "10px",
                   borderWidth: "0",
                   borderRadius: "0 0 10px 10px",
                   fontSize: { xs: "8pt", sm: "10pt", md: "12pt" },
-                  top: "-7px",
+                  top: "-6px",
                   padding: "10px",
                 }}
               >
