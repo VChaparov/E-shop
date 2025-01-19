@@ -1,9 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router";
 import Box from "@mui/material/Box";
-import { Popper, InputBase, Fade, Paper, Typography } from "@mui/material";
+import { InputBase } from "@mui/material";
 import featchSearch from "../../Utilities/featchSearch";
-import ResultsList from "../../Utilities/ResultsList";
+import DropdownList from "../../Utilities/DropdownList";
+import sleep from "../../Utilities/sleep";
+import { useQuery } from "react-query";
+import Loader from "../../Utilities/Loader";
 
 export default function SearchBar() {
   const [search, setSearch] = useState("");
@@ -11,28 +14,40 @@ export default function SearchBar() {
 
   const updateSearch = (e) => {
     setSearch(e.target.value);
-    if (e.target.value !== undefined) setItems(featchSearch(e.target.value));
     if (e.target.value == "") {
       setItems({});
     }
   };
 
-  const [anchorEl, setAnchorEl] = useState(null);
-  const [open, setOpen] = useState(false);
-  const [placement, setPlacement] = useState();
+  const query = useQuery({
+    queryKey: [{ search }],
+    queryFn: () =>
+      sleep(300).then(() => {
+        if (search.length > 0) {
+          setItems(featchSearch(search));
+        } else {
+          setItems({});
+        }
+      }),
+  });
 
-  const handleClick = (newPlacement) => (event) => {
-    setAnchorEl(event.currentTarget);
-    setOpen((prev) => placement !== newPlacement || !prev);
-    setPlacement(newPlacement);
-  };
+  function showDropdown() {
+    document.getElementById("dropdown").style.display = "flex";
+  }
+  function hideDropdown() {
+    document.getElementById("dropdown").style.display = "none";
+  }
+
   const navigate = useNavigate();
-
   return (
     <>
       <Box
-        sx={{ width: "100%", height: "100%" }}
-        onClick={handleClick("bottom")}
+        sx={{
+          width: "100%",
+          height: "100%",
+          display: "flex",
+          flexDirection: "column",
+        }}
       >
         <InputBase
           placeholder="Search"
@@ -55,73 +70,59 @@ export default function SearchBar() {
           value={search}
           onKeyDown={(e) => {
             if (e.key === "Escape") {
-              setOpen(false);
+              hideDropdown();
               setSearch("");
               setItems({});
             }
             if (e.key === "Enter") {
-              setOpen(false);
+              hideDropdown();
               navigate(`/Search/${encodeURIComponent(search.trim())}`);
               setSearch("");
             }
           }}
           onChange={(e) => {
             updateSearch(e);
-            setOpen(true);
+            showDropdown();
           }}
-          //onBlur={() => setOpen(false)}
+          onBlur={() => sleep(100).then(() => hideDropdown())}
+          onClick={() => showDropdown()}
         />
-      </Box>
-      <Popper
-        sx={{ position: "relative", zIndex: 5 }}
-        open={open}
-        anchorEl={anchorEl}
-        placement={placement}
-        transition
-      >
-        {({ TransitionProps }) => (
-          <Fade {...TransitionProps} timeout={150}>
-            <Box
-              sx={{
-                width: {
-                  xs: "20em",
-                  sm: "22em",
-                  md: "30em",
-                  lg: "40em  ",
-                  display: "flex",
-                  justifyContent: "start",
-                },
-              }}
-            >
-              <Paper
-                onClick={() => setSearch("")}
-                sx={{
-                  display: { xs: "none", sm: "flex" },
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  backgroundColor: "rgba(9, 149, 133, 0.7)",
-                  color: "white",
-                  width: "99%",
-                  position: "relative",
-                  zIndex: " 5",
-                  textIndent: "10px",
-                  borderWidth: "0",
-                  borderRadius: "0 0 10px 10px",
-                  fontSize: { xs: "8pt", sm: "10pt", md: "12pt" },
-                  top: "-6px",
-                  padding: "10px",
-                }}
-              >
-                {items.length > 0 ? (
-                  <ResultsList cards={items} />
-                ) : (
-                  <Box>Search Results</Box>
-                )}
-              </Paper>
+        <Box
+          id="dropdown"
+          onClick={() => {
+            setSearch("");
+            hideDropdown();
+          }}
+          sx={{
+            display: "none",
+            flexDirection: "column",
+            justifyContent: "center",
+            backgroundColor: "rgba(9, 149, 133, 0.7)",
+            color: "white",
+            width: { xs: "20em", sm: "22em", md: "30em", lg: "40em  " },
+            position: "absolute",
+            zIndex: " 5",
+            borderWidth: "0",
+            borderRadius: "10px",
+            fontSize: { xs: "8pt", sm: "10pt", md: "12pt" },
+            top: "px",
+          }}
+        >
+          {query.isLoading ? (
+            <Loader />
+          ) : query.isError ? (
+            <pre>{JSON.stringify(query.error)}</pre>
+          ) : items.length > 0 ? (
+            <DropdownList cards={items} />
+          ) : (
+            <Box sx={{ margin: "15px", fontSize: "20pt" }}>
+              <br />
+              <br />
+              No Search Results
             </Box>
-          </Fade>
-        )}
-      </Popper>
+          )}
+        </Box>
+      </Box>
     </>
   );
 }

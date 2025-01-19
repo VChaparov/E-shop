@@ -1,17 +1,19 @@
 import React from "react";
-import SearchResult from "./SearchResult";
+import DropdownResult from "./DropdownResult";
 import "./utilitiesStyles.css";
 import { Link } from "react-router";
 
-function ResultsList(props) {
+function DropdownList(props) {
   const cards = props.cards;
   return (
     <>
+    <br/>
+    <br />
       {cards.map((card, index) => {
-        if (index <= 10) {
+        if (index <= 5) {
           return (
             <Link to={`/Products/${card.category}/${card.id}`} key={index}>
-              <SearchResult
+              <DropdownResult
                 id={card.id}
                 name={card.name}
                 brand={card.brand}
@@ -28,4 +30,4 @@ function ResultsList(props) {
   );
 }
 
-export default ResultsList;
+export default DropdownList;

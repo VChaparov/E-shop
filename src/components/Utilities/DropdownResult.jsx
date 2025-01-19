@@ -1,7 +1,7 @@
 import "./utilitiesStyles.css";
 import { Box } from "@mui/material";
 
-function SearchResult(props) {
+function DropdownResult(props) {
   var URL = `${import.meta.env.BASE_URL}/images/${props.imgURL}.jpg`;
   return (
     <Box
@@ -10,7 +10,7 @@ function SearchResult(props) {
         display: "flex",
         alignItems: "center",
         flexDirection: "row",
-        margin: "2px",
+        margin: "0 5px 5px 5px",
         backgroundColor: "white",
         borderRadius: "5px",
       }}
@@ -45,4 +45,4 @@ function SearchResult(props) {
   );
 }
 
-export default SearchResult;
+export default DropdownResult;

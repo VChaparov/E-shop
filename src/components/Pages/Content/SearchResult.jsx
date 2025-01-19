@@ -18,7 +18,6 @@ function SearchResult() {
 
   useEffect(() => {
     if (params.query) {
-        console.log("change!")
       query.refetch();
     }
   }, [params.query]);
