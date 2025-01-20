@@ -191,3 +191,5 @@ a:focus > .nav-link {
   height: 300px;
   border-radius: 8px;
 }
+/* *{box-sizing: border-box;
+border:solid red 1px} */

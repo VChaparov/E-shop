@@ -17,7 +17,7 @@ function Header() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            width: { xs: "20em", sm: "22em", md: "30em", lg: "40em  " },
+            width: { xs: "20rem", sm: "22rem", md: "30rem", lg: "40rem" },
           }}
         >
           <SearchBar />
