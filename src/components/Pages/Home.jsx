@@ -43,7 +43,7 @@ function Home() {
           className="content-grid"
           sx={{
             gridTemplateColumns: {
-              xs: "repeat(3, minmax(7em, 7em))",
+              xs: "repeat(1, minmax(7em, 7em))",
               sm: "repeat(3, minmax(8em, 8em))",
               md: " repeat(3, minmax(10em, 10em))",
               lg: " repeat(3, minmax(13em, 13em))",

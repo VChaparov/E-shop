@@ -19,7 +19,7 @@ body {
   z-index: 1;
   position: fixed;
   display: inline-flex;
-  height: 4em;
+  height: 5em;
   background-color: rgba(0, 6, 53, 0.7);
   box-shadow: 0px 3px 8px black;
   align-items: center;

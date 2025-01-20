@@ -7,7 +7,17 @@ function Layout() {
   return (
     <>
       <Header />
-      <Box className="body-container" sx={{}}>
+      <Box
+        className="body-container"
+        sx={{
+          width: "100%",
+          padding: "0",
+          position: "relative",
+          top: { xs: "9em", sm: "5em" },
+          display: "inline-flex",
+          justifyItems: "center",
+        }}
+      >
         <SideBar />
         <Box className="content-wrapper">
           <Content />
