@@ -21,7 +21,6 @@ function Header() {
           boxShadow: "0px 3px 8px black",
           alignItems: "center",
           justifyContent: "space-between",
-          overflow:"hidden"
         }}
       >
         <Box className="logo">
